@@ -118,6 +118,34 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Brand Logo ── */
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.brand-logo__img {
+  width: clamp(110px, 18vw, 180px);
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(79,70,229,0.35));
+  animation: fadeUp 0.7s cubic-bezier(.4,0,.2,1) both;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.brand-logo__img:hover {
+  transform: scale(1.06) rotate(-3deg);
+  filter: drop-shadow(0 0 28px rgba(79,70,229,0.55));
+}
+
+[data-theme="dark"] .brand-logo__img {
+  filter: drop-shadow(0 0 20px rgba(129,140,248,0.45));
+}
+
+[data-theme="dark"] .brand-logo__img:hover {
+  filter: drop-shadow(0 0 32px rgba(129,140,248,0.7));
+}
+
 /* ── Logo ── */
 .logo {
   font-size: clamp(3rem, 10vw, 7rem);
