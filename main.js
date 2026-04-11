@@ -15,6 +15,7 @@ const logoEl     = document.getElementById('logoText');
 const cursorEl   = document.getElementById('logoCursor');
 const subtitleEl = document.getElementById('subtitle');
 const ctaGroup   = document.getElementById('ctaGroup');
+const contactBtn = document.querySelector('.contact-btn');
 
 const LOGO     = 'Vupi.us';
 const SUBTITLE = 'Soluções em tecnologia!';
@@ -36,7 +37,13 @@ typewrite(logoEl, LOGO, 90, () => {
     cursorEl.style.display = 'none';
     typewrite(subtitleEl, SUBTITLE, 45, () => {
       cursorEl.style.display = 'inline-block';
-      setTimeout(() => ctaGroup.classList.add('visible'), 200);
+      setTimeout(() => {
+        ctaGroup.classList.add('visible');
+        if (contactBtn) {
+          contactBtn.style.opacity = '1';
+          contactBtn.style.pointerEvents = 'auto';
+        }
+      }, 300);
     });
   }, 300);
 });
