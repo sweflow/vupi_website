@@ -439,6 +439,23 @@ body {
 .contact-btn:hover .contact-btn__email {
   filter: brightness(1.2);
 }
+/* ── Footer ── */
+.site-footer {
+  position: fixed;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0.8;
+  letter-spacing: 0.06em;
+  z-index: 10;
+  pointer-events: none;
+  transition: color var(--transition);
+}
+
 .orb {
   position: fixed;
   border-radius: 50%;
